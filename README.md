@@ -51,3 +51,7 @@ The goal is to learn and apply AI methods in various areas of biology.
 - Week 12: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week12.md>Ethics & Challenges in AI for Biology</a>
 - Week 13: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week13.md>Student Project Presentations (Part I)</a>
 - Week 14: <a href=https://github.com/karakaplanm/bio-ai-lectures/blob/main/lectures/week14.md>Student Project Presentations (Part II) & Wrap-up</a>
+
+
+
+
