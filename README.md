@@ -1,4 +1,4 @@
-# Bio-AI Lectures
+# Artificial Intelligence in Biology
 
 This repository contains the lecture materials for the course **Artificial Intelligence in Biology (Bio-AI)**.  
 The goal is to learn and apply AI methods in various areas of biology.  
