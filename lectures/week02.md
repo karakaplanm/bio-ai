@@ -1,5 +1,5 @@
 # Lecture 2: Machine Learning Fundamentals  
-**Date:** 2025-09-22
+**Date:** 2025-09-29
 
 ---
 
