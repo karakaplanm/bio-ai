@@ -1,5 +1,6 @@
-## Lecture 2: Machine Learning Fundamentals  
+# Lecture 2: Machine Learning Fundamentals  
 
+Date: 09.29.2025
 ---
 
 ## 1. Supervised vs. Unsupervised Learning  
