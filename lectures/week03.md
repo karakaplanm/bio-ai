@@ -1,7 +1,6 @@
 # Lecture 3: Deep Learning Basics  
 
 **Date:** 2025-10-06
-**Instructor:**  
 
 ---
 
