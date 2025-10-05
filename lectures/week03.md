@@ -25,6 +25,7 @@
   - **Summation and bias (Σ wᵢxᵢ + b)**  
   - **Activation function (e.g., step, sigmoid, ReLU)**  
 
+![](activation_functions.png)
 ###  Multi-Layer Perceptron (MLP)  
 - Consists of:  
   - **Input layer**: raw features  
