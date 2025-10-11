@@ -4,6 +4,7 @@
 ## This example uses **scikit-learn** to predict whether a patient has cancer based on a few gene expression values.
 
 # Example 1: Simple cancer classification
+# This example uses a Random Forest classifier to predict cancer status based on simulated gene expression data.
 
 import numpy as np
 from sklearn.model_selection import train_test_split

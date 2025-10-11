@@ -1,5 +1,7 @@
 # Example 5: Drug-target interaction prediction
 # AI for Drug Discovery: Predict if a compound binds to a target protein using simulated features.
+# This example uses a Support Vector Machine (SVM) for classification.
+
 import numpy as np
 from sklearn.svm import SVC
 

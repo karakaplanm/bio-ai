@@ -1,5 +1,6 @@
 # Example 4: Predicting protein solubility
 # Here we train a model to predict a protein’s solubility from simplified numeric features.
+# This is a basic example using linear regression.
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression

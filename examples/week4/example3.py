@@ -2,7 +2,9 @@
 # Example: DNA Sequence Classification with Deep Learning
 
 # Using TensorFlow/Keras to predict whether a DNA sequence contains a promoter region.
-# pip install tensorflow --break-system-packag
+# pip install tensorflow --break-system-packages
+
+# This is a  LSTM-based model for sequence classification. 
 
 import numpy as np
 from tensorflow.keras.models import Sequential
