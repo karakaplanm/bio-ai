@@ -1,11 +1,6 @@
 # 🧬 Lecture 5: Genomic Data Analysis
 
-**Course:** Computational Biology & Bioinformatics  
-**Duration:** 2 hours  
-**Instructor:** Dr. Mustafa Karakaplan  
-**Topic Focus:** Sequence alignment, classification, and prediction tasks in genomic data analysis  
 
----
 
 ## 1. Introduction to Genomic Data
 
