@@ -147,7 +147,115 @@ Search a protein in AlphaFold DB and report:
 - pLDDT confidence score
 - Known or predicted function
 
-### optional coding
+
+## Example
+
 Run DTI prediction with **DeepPurpose** in Python.
 
 ---
+
+This workflow demonstrates how modern bioinformatics and AI tools help us analyze proteins and predict drug–target interactions efficiently.
+
+---
+
+### 1) Download Protein Sequence from UniProt
+
+**What we do:**  
+Retrieve the amino acid sequence of a target protein from the UniProt database.
+
+**Why it's important:**  
+The protein sequence is the fundamental input for all further analysis.  
+It allows us to:
+
+- Predict structure
+- Study function
+- Investigate as a drug target
+
+> **Protein sequence = the identity of the protein**
+
+---
+
+### 2) Download AlphaFold Model
+
+**What we do:**  
+Use AlphaFold to obtain the predicted **3D structure** of the protein.
+
+**Why it's important:**  
+Protein **shape determines function**.
+
+This helps us to:
+
+- Identify active/binding sites
+- Study protein mechanics
+- Support rational drug design
+
+> Without structure, drug discovery is like **shooting in the dark**.
+
+---
+
+### 3) Analyze pLDDT Confidence Scores
+
+**What we do:**  
+Examine pLDDT values (0–100) in the AlphaFold model.
+
+| Score | Meaning |
+|---|---|
+| 90+ | Very high confidence |
+| 70–90 | Good prediction |
+| 50–70 | Low confidence |
+| < 50 | Uncertain / unstructured region |
+
+**Why it's important:**  
+Shows which regions of the model are **reliable** and where caution is needed.
+
+> Think of it as checking the **accuracy rating** of the model.
+
+---
+
+### 4) Predict Drug–Target Binding with DeepPurpose
+
+**What we do:**  
+Feed a **drug SMILES string** and the **protein sequence** into a pretrained DeepPurpose model to predict binding affinity.
+
+**Why it's important:**
+
+- Quickly evaluate if a drug can bind a protein
+- Prioritize compounds before wet-lab experiments
+- Speed up drug discovery and drug repurposing
+
+**Interpretation:**
+
+- High score → likely good binding
+- Low score → weak/no binding
+
+> AI gives us a **virtual screening shortcut** before laboratory testing.
+
+---
+
+### 🎯 Summary
+
+| Step | Goal |
+|---|---|
+Get protein sequence | Identify the target |
+Get AlphaFold structure | Understand 3D shape |
+Check pLDDT | Validate prediction confidence |
+Run DeepPurpose | Predict drug binding |
+
+**Outcome:**  
+AI + bioinformatics allows us to explore proteins and drug interactions **in minutes instead of months**.
+
+---
+
+### 🧠 Big Idea
+
+Combining:
+
+- **Structural biology**
+- **Machine learning**
+- **Drug discovery tools**
+
+gives us a powerful pipeline for modern biomedical research.
+
+---
+
+
