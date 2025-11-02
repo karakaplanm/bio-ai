@@ -152,6 +152,10 @@ Search a protein in AlphaFold DB and report:
 
 Run DTI prediction with **DeepPurpose** in Python.
 
+Sample code is provided here.
+
+https://github.com/karakaplanm/bio-ai/tree/main/examples/week6
+
 ---
 
 This workflow demonstrates how modern bioinformatics and AI tools help us analyze proteins and predict drug–target interactions efficiently.
