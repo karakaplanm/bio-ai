@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Introduction to Proteomics (15 min)
+## 1. Introduction to Proteomics
 
 ### What is Proteomics?
 Proteomics = large-scale study of proteins, including:
@@ -42,7 +42,7 @@ Proteomics = large-scale study of proteins, including:
 
 ---
 
-## 2. Protein Structure Fundamentals (15 min)
+## 2. Protein Structure Fundamentals
 
 | Level | Description |
 |---|---|
@@ -57,7 +57,7 @@ Proteomics = large-scale study of proteins, including:
 
 ---
 
-## 3. AlphaFold and AI-based Structural Biology (40 min)
+## 3. AlphaFold and AI-based Structural Biology
 
 ### Traditional Structure Determination
 | Method | Limitations |
@@ -83,7 +83,7 @@ Proteomics = large-scale study of proteins, including:
 
 ---
 
-## 4. Drug–Target Interaction (DTI) & AI (35 min)
+## 4. Drug–Target Interaction (DTI) & AI
 
 ### What is DTI?
 Interaction between a drug molecule and its protein target.
@@ -113,7 +113,7 @@ Interaction between a drug molecule and its protein target.
 
 ---
 
-## 5. Ethics & Challenges (10 min)
+## 5. Ethics & Challenges
 
 - Data bias in biological datasets  
 - Model interpretability concerns  
