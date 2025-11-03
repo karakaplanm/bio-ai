@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 X = np.random.rand(100, 2)
 
 # Apply K-Means clustering
-kmeans = KMeans(n_clusters=4, random_state=42)
+kmeans = KMeans(n_clusters=3, random_state=42)
 labels = kmeans.fit_predict(X)
 
 # Plot

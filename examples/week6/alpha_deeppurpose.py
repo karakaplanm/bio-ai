@@ -14,6 +14,10 @@ import requests, io, statistics
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 from DeepPurpose import DTI, utils
+from Bio.PDB import MMCIFParser
+import numpy as np
+
+
 
 # =========================
 # User input
@@ -55,19 +59,17 @@ try:
         # Extract pLDDT from CIF (B-factor column)
         # =========================
         plddt = []
-        with open(cif_file) as f:
-            for line in f:
-                # For CIF format, look for _atom_site.B_iso_or_equiv
-                if line.startswith("_atom_site.B_iso_or_equiv"):
-                    continue
-                if line.startswith("ATOM") or line.startswith("HETATM"):
-                    try:
-                        # Try different column positions for pLDDT
-                        parts = line.split()
-                        if len(parts) > 10:
-                            plddt.append(float(parts[-2]))  # Usually B-factor is second to last
-                    except (ValueError, IndexError):
-                        pass
+        parser = MMCIFParser(QUIET=True)
+        structure = parser.get_structure("AF", cif_file)
+
+        for model in structure:
+            for chain in model:
+                for residue in chain:
+                    for atom in residue:
+                    # AlphaFold mmCIF'te B-factor sütunu pLDDT'yi tutar (0-100)
+                        plddt.append(atom.get_bfactor())
+
+
         
         if plddt:
             print(f"pLDDT mean={statistics.mean(plddt):.2f} median={statistics.median(plddt):.2f}")
