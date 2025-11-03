@@ -9,4 +9,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install DeepPurpose --break-system-packages
 pip install rdkit --break-system-packages
 pip install git+https://github.com/bp-kelley/descriptastorus --break-system-packages
+
+# Run the python code.
+python3 alpha_deeppurpose.py
 ```
