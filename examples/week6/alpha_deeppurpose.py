@@ -36,7 +36,7 @@ print(f"Protein: {uniprot_id} | Drug: Imatinib")
 # =========================
 # Fetch protein FASTA from UniProt
 # =========================
-
+# https://rest.uniprot.org/uniprotkb/P00519.fasta
 url = f"https://rest.uniprot.org/uniprotkb/{uniprot_id}.fasta"
 r = requests.get(url)
 fasta = r.text
