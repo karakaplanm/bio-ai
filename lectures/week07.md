@@ -7,14 +7,14 @@
 **Goal:**  
 Understand how artificial intelligence (AI) methods—especially deep learning—are applied to microscopy and histopathology (tissue) image analysis.
 
-**Duration:** ~2 hours  
+**Duration:** 
 
 **Outline:**  
-1. Introduction and Key Concepts (20 min)  
-2. AI in Microscopy (30 min)  
-3. AI in Histology and Pathology (30 min)  
-4. Current Methods and Challenges (20 min)  
-5. Discussion and Wrap-up (20 min)
+1. Introduction and Key Concepts 
+2. AI in Microscopy 
+3. AI in Histology and Pathology
+4. Current Methods and Challenges
+5. Discussion and Wrap-up 
 
 ---
 
