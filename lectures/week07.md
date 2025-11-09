@@ -7,7 +7,6 @@
 **Goal:**  
 Understand how artificial intelligence (AI) methods—especially deep learning—are applied to microscopy and histopathology (tissue) image analysis.
 
-**Duration:** 
 
 **Outline:**  
 1. Introduction and Key Concepts 
