@@ -1,1 +1,0 @@
-# Fungal Colony Classification
