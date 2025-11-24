@@ -8,8 +8,8 @@ Requirements:
 
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 
-MODEL_NAME = "dmis-lab/biobert-v1.1"
-
+MODEL_NAME = "Ishan0612/biobert-ner-disease-ncbi"
+#MODEL_NAME = "alvaroalon2/biobert_chemical_ner"
 
 def main():
     print(f"Loading model: {MODEL_NAME}")
