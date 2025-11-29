@@ -1,4 +1,4 @@
-# Değişken / Fonksiyon Adlandırma Mini Notu
+# Değişken / Fonksiyon / Dosya Adlandırma Mini Notu
 
 ## 🐍 snake_case
 - Kelimeler alt çizgi ile ayrılır.
