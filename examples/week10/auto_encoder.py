@@ -7,6 +7,18 @@ pip install tensorflow
 """
 
 
+"""Amaç:
+300 boyutlu (genomik + transkriptomik + proteomik vb.) veriyi
+👉 32 boyutlu ortak biyolojik temsile indirgemek (latent space)
+
+Bu, multi-omics entegrasyonunda:
+
+alt tip keşfi
+hasta gruplama
+biyolojik imza (signature) çıkarma
+noise azaltma
+için kullanılır.
+"""
 
 import tensorflow as tf
 from tensorflow.keras import layers
