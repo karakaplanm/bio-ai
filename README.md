@@ -1,7 +1,4 @@
 
-
----
-
 # Welcome to Artificial Intelligence in Biology (Bio-AI) 🧬🤖
 
 Dear Students,
@@ -64,16 +61,6 @@ See you in class!
 
 ---
 
-
-
-## Contents
-
-- 📖 Lecture notes (`lectures/`)
-- 💻 Example codes (`examples/`)
-- 🧪 Assignments and exercises (`assignments/`)
-- 📚 Additional readings (`reading/`)
-
----
 
 ## About the Course
 
