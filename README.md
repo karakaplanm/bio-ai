@@ -1,11 +1,4 @@
-# Artificial Intelligence in Biology
 
-This repository contains the lecture materials for the course **Artificial Intelligence in Biology (Bio-AI)**.  
-The goal is to learn and apply AI methods in various areas of biology.  
-
----
-
-Moleküler Biyoloji ve Genetik öğrencileri için ders öncesi teknik hazırlıkları (GitHub, Google Colab, AI araçları vb.) adım adım açıklayan, doğrudan duyuru olarak paylaşabileceğin İngilizce metin:
 
 ---
 
