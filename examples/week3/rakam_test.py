@@ -1,5 +1,10 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
+from tensorflow import keras
+
+# Eğitilmiş modeli yükle (önce rakam_tanima.py çalıştırılmalı)
+model = keras.models.load_model("rakam_modeli.keras")
 
 # Görseli oku
 img = Image.open("el_yazim.png").convert("L")  # Gri tonlama

@@ -6,8 +6,8 @@ This week moves from tabular data to images: a small neural network built with T
 
 | File | Description |
 |:--|:--|
-| `rakam_tanima.py` | Trains a dense neural network on MNIST (60,000 training and 10,000 test images of the digits 0–9), prints the test accuracy, and shows predictions for the first five test images. |
-| `rakam_test.py` | Loads `el_yazim.png`, converts it to the MNIST format, and asks the trained model which digit it is. |
+| `rakam_tanima.py` | Trains a dense neural network on MNIST (60,000 training and 10,000 test images of the digits 0–9), prints the test accuracy, shows predictions for the first five test images, and saves the model as `rakam_modeli.keras`. |
+| `rakam_test.py` | Loads the saved model and `el_yazim.png`, converts the image to the MNIST format, and asks the model which digit it is. |
 | `el_yazim.png` | A sample test image: the digit 3 drawn in black on a white 280×280 background. Replace it with your own handwriting. |
 
 ## Setup
@@ -27,18 +27,13 @@ cd examples/week3
 python3 rakam_tanima.py
 ```
 
-`rakam_test.py` does not run on its own: it uses the `model` trained by `rakam_tanima.py` and calls `plt` without importing it. Run both in the same Python session, for example:
+This saves the trained model as `rakam_modeli.keras`. Then test it on the image:
 
 ```bash
-python3 -i rakam_tanima.py
+python3 rakam_test.py
 ```
 
-```python
->>> import matplotlib.pyplot as plt
->>> exec(open("rakam_test.py").read())
-```
-
-Close the image window to see the result, which should be `Tahmin edilen rakam: 3` for the supplied image. In a Jupyter or Colab notebook, paste the two scripts into consecutive cells and add `import matplotlib.pyplot as plt` to the second one.
+Close the image window to see the result, which should be `Tahmin edilen rakam: 3` for the supplied image.
 
 ## What the training script does
 
@@ -49,15 +44,17 @@ Close the image window to see the result, which should be `Tahmin edilen rakam: 
 5. Trains for 5 epochs with the Adam optimizer, holding out 10% of the training data for validation.
 6. Evaluates on the 10,000 test images and prints the accuracy (`Test doğruluğu`).
 7. Prints the true and predicted labels for the first five test images.
+8. Saves the trained model to `rakam_modeli.keras`.
 
 Expect a test accuracy of roughly 97–98% (97.5% in a test run with TensorFlow 2.22). Exact numbers vary between runs.
 
 ## What the test script does
 
-1. Opens `el_yazim.png` and converts it to grayscale.
-2. Inverts the colors, because MNIST digits are white on a black background.
-3. Resizes the image to 28×28 and displays it.
-4. Scales the pixels to 0–1, flattens them to 784 values, and prints the predicted digit.
+1. Loads the model saved by the training script.
+2. Opens `el_yazim.png` and converts it to grayscale.
+3. Inverts the colors, because MNIST digits are white on a black background.
+4. Resizes the image to 28×28 and displays it.
+5. Scales the pixels to 0–1, flattens them to 784 values, and prints the predicted digit.
 
 ## Using your own image
 
@@ -86,6 +83,6 @@ If your digit is already white on black, remove the `ImageOps.invert(img)` line 
   ln -s /usr/lib/nvidia-cuda-toolkit/libdevice ~/.local/cuda/nvvm/libdevice
   XLA_FLAGS=--xla_gpu_cuda_data_dir=$HOME/.local/cuda python3 rakam_tanima.py
   ```
-- **`NameError: name 'model' is not defined`** or **`name 'plt' is not defined`** — `rakam_test.py` was run on its own. Run it in the same session as `rakam_tanima.py`, as shown under Run.
+- **`File not found: filepath=rakam_modeli.keras`** — run `rakam_tanima.py` first; it creates the model file that `rakam_test.py` loads.
 - **`FileNotFoundError: el_yazim.png`** — run the script from inside `examples/week3`.
 - **Wrong prediction on your own image** — the network only knows digits that look like MNIST. Check the preview window: the digit should be white, centered, and clearly visible on a black background.

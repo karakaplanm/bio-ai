@@ -41,3 +41,5 @@ predictions = model.predict(x_test[:5])
 print("\nGerçek etiketler:", y_test[:5])
 print("Tahmin edilen etiketler:", predictions.argmax(axis=1)[:5])
 
+# Modeli kaydet (rakam_test.py bu dosyayı yükler)
+model.save("rakam_modeli.keras")
