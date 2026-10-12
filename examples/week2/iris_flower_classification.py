@@ -286,7 +286,7 @@ plt.show()
 """#### Chart - 6 : Correlation Heatmap"""
 
 # Correlation Heatmap Visualization Code
-corr_matrix = data.corr()
+corr_matrix = data.corr(numeric_only=True)
 
 # Plot Heatmap
 plt.figure(figsize=(8, 4))
