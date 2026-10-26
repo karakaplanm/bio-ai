@@ -1,0 +1,98 @@
+{
+  "best_model": "Support Vector Machine",
+  "n_samples": 300,
+  "n_features": 71,
+  "classes": [
+    "Coleoptera",
+    "Diptera",
+    "Hemiptera",
+    "Hymenoptera",
+    "Lepidoptera",
+    "Odonata"
+  ],
+  "models_benchmark": {
+    "Random Forest": {
+      "cv_f1_mean": 0.8554585401412027,
+      "cv_f1_std": 0.030145302517788065,
+      "test_accuracy": 0.8,
+      "test_precision": 0.8134324009324009,
+      "test_recall": 0.8000000000000002,
+      "test_f1": 0.7975263535365836
+    },
+    "HistGradientBoosting": {
+      "cv_f1_mean": 0.804517187891801,
+      "cv_f1_std": 0.06882217294906096,
+      "test_accuracy": 0.85,
+      "test_precision": 0.8518939393939394,
+      "test_recall": 0.8500000000000001,
+      "test_f1": 0.8486772486772488
+    },
+    "Support Vector Machine": {
+      "cv_f1_mean": 0.884083946669086,
+      "cv_f1_std": 0.028537836185360443,
+      "test_accuracy": 0.9,
+      "test_precision": 0.9154040404040406,
+      "test_recall": 0.9,
+      "test_f1": 0.8986786633845457
+    },
+    "Logistic Regression": {
+      "cv_f1_mean": 0.8729189836078382,
+      "cv_f1_std": 0.043383032291507,
+      "test_accuracy": 0.8833333333333333,
+      "test_precision": 0.907051282051282,
+      "test_recall": 0.8833333333333333,
+      "test_f1": 0.8830264891477707
+    }
+  },
+  "best_model_per_class_report": {
+    "Coleoptera": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1-score": 0.8888888888888888,
+      "support": 10.0
+    },
+    "Diptera": {
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1-score": 0.8235294117647058,
+      "support": 10.0
+    },
+    "Hemiptera": {
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1-score": 0.9090909090909091,
+      "support": 10.0
+    },
+    "Hymenoptera": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "Lepidoptera": {
+      "precision": 0.75,
+      "recall": 0.9,
+      "f1-score": 0.8181818181818182,
+      "support": 10.0
+    },
+    "Odonata": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 10.0
+    },
+    "accuracy": 0.9,
+    "macro avg": {
+      "precision": 0.9154040404040406,
+      "recall": 0.9,
+      "f1-score": 0.8986786633845457,
+      "support": 60.0
+    },
+    "weighted avg": {
+      "precision": 0.9154040404040403,
+      "recall": 0.9,
+      "f1-score": 0.8986786633845457,
+      "support": 60.0
+    }
+  }
+}
