@@ -1,0 +1,25 @@
+; NVT equilibration, 100 ps, protein + ligand restrained
+define          = -DPOSRES
+integrator      = md
+dt              = 0.002
+nsteps          = 50000
+nstxout-compressed = 5000
+nstenergy       = 500
+nstlog          = 5000
+continuation    = no
+constraints     = h-bonds
+constraint-algorithm = lincs
+cutoff-scheme   = Verlet
+coulombtype     = PME
+rcoulomb        = 1.0
+rvdw            = 1.0
+DispCorr        = EnerPres
+tcoupl          = V-rescale
+tc-grps         = System
+tau-t           = 0.1
+ref-t           = 300
+pcoupl          = no
+pbc             = xyz
+gen-vel         = yes
+gen-temp        = 300
+gen-seed        = -1

@@ -1,0 +1,28 @@
+; Production MD, 100 ns
+; no restraints
+integrator      = md
+dt              = 0.002
+nsteps          = 50000000   ; 100 ns
+nstxout-compressed = 5000
+nstenergy       = 500
+nstlog          = 5000
+continuation    = yes
+constraints     = h-bonds
+constraint-algorithm = lincs
+cutoff-scheme   = Verlet
+coulombtype     = PME
+rcoulomb        = 1.0
+rvdw            = 1.0
+DispCorr        = EnerPres
+tcoupl          = V-rescale
+tc-grps         = System
+tau-t           = 0.1
+ref-t           = 300
+pcoupl          = C-rescale
+pcoupltype      = isotropic
+tau-p           = 2.0
+ref-p           = 1.0
+compressibility = 4.5e-5
+
+pbc             = xyz
+gen-vel         = no

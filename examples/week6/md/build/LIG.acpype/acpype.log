@@ -1,0 +1,77 @@
+============================================================================
+| ACPYPE: AnteChamber PYthon Parser interfacE v. 2026.10.15 (c) 2026 AWSdS |
+============================================================================
+DEBUG: CLI: -i lig.mol2 -b LIG -c bcc -a gaff2 -n 0 -o gmx
+DEBUG: Python Version 3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]
+DEBUG: Max execution time tolerance is 3h
+DEBUG: '/home/muka/.local/lib/python3.14/site-packages/acpype/amber_linux/bin/antechamber' -dr no -i 'lig.mol2' -fi mol2 -o tmp -fo ac -pf y -j 4
+DEBUG: Info: The atom type is set to gaff; the options available to the -at flag are
+ gaff, gaff2, amber, bcc, abcg2, and sybyl.
+
+
+DEBUG: setResNameCheckCoords done
+DEBUG: Net charge drift '0.000000'
+==> ... charge set to 0
+==> Executing Antechamber...
+DEBUG: '/home/muka/.local/lib/python3.14/site-packages/acpype/amber_linux/bin/antechamber' -dr no -i 'lig.mol2' -fi mol2 -o 'LIG_bcc_gaff2.mol2' -fo mol2 -c bcc -nc 0 -m 1 -j 4 -s 2 -df 2 -at gaff2 -pf n 
+DEBUG: No file left to be removed
+==> * Antechamber OK *
+DEBUG: '/home/muka/.local/lib/python3.14/site-packages/acpype/amber_linux/bin/parmchk2' -i 'LIG_bcc_gaff2.mol2' -f mol2 -o 'LIG_AC.frcmod' -s 2
+==> * Parmchk OK *
+DEBUG: No crd or prm files left to be removed
+==> Executing Tleap...
+DEBUG: '/home/muka/.local/lib/python3.14/site-packages/acpype/amber_linux/bin/tleap' -f tleap.in
+DEBUG: ++++++++++start_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DEBUG: Checking 'LIG'....
+Checking parameters for unit 'LIG'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+DEBUG: ++++++++++end_quote+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==> * Tleap OK *
+==> Removing temporary files...
+DEBUG: prmtop and inpcrd files loaded
+DEBUG: basename defined = 'LIG'
+DEBUG: getCoords done
+DEBUG: getABCOEFs done
+DEBUG: atom name 'Cl1' HAS to be all UPPERCASE... Applying this here.
+DEBUG: charge to be balanced: total 0.0000020058
+DEBUG: balanceCharges done
+DEBUG: Balanced TotalCharge -0.0000000000
+DEBUG: PBC = []
+DEBUG: getAtoms done
+DEBUG: getBonds done
+DEBUG: getAngles done
+DEBUG: getDihedrals done
+==> Using OpenBabel v.3.1.0
+
+==> Writing GROMACS files
+
+==> Disambiguating lower and uppercase atomtypes in GMX top file, even if identical.
+
+DEBUG: writing GRO file
+DEBUG: Box size estimated
+DEBUG: writing POSRE file
+DEBUG: atomTypes 22
+DEBUG: GMX atomtypes done
+DEBUG: atoms 59
+DEBUG: GMX atoms done
+DEBUG: bonds 62
+DEBUG: GMX bonds done
+DEBUG: atomPairs 134
+DEBUG: GMX pairs done
+DEBUG: angles 107
+DEBUG: GMX angles done
+DEBUG: setProperDihedralsCoef done
+DEBUG: properDihedralsCoefRB 148
+DEBUG: properDihedralsAlphaGamma 0
+DEBUG: properDihedralsGmx45 151
+==> Writing GMX dihedrals for GMX 4.5 and higher.
+
+DEBUG: GMX special proper dihedrals done
+DEBUG: improperDihedrals 17
+DEBUG: GMX improper dihedrals done
+==> Writing pickle file LIG.pkl
+==> Removing temporary files...
+Total time of execution: 2m 42s
+DEBUG: No tmp folder left to be removed

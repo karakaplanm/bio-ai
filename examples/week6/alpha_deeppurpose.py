@@ -106,3 +106,7 @@ model = DTI.model_pretrained(model='Morgan_CNN_BindingDB')
 prediction = model.predict(X_pred)[0]
 print(f"\nPredicted Binding Affinity Score: {prediction:.4f}")
 
+# Score is pKd (-log10 M); convert to dissociation/association constants
+kd_nM = 10 ** (-prediction) * 1e9
+print(f"Predicted Kd: {kd_nM:.1f} nM | Ka: {1/(kd_nM*1e-9):.2e} M^-1")
+

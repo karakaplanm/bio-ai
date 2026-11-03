@@ -1,0 +1,20 @@
+; LIG_GMX.top created by acpype (v: 2026.10.15) on Mon Oct 26 14:19:28 2026
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include LIG_GMX.itp topology
+#include "LIG_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_LIG.itp"
+#endif
+
+[ system ]
+ LIG
+
+[ molecules ]
+; Compound        nmols
+ LIG              1     

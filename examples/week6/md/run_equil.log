@@ -1,0 +1,323 @@
+                      :-) GROMACS - gmx grompp, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx grompp -f ../mdp/em.mdp -c ../build/solv_ions.gro -p ../build/topol.top -o em.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 103095.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+Back Off! I just backed up em.tpr to ./#em.tpr.1#
+
+GROMACS reminds you: "When I asked a younger colleague at the university how he had been able to change his research field several times within a decade or so, he answered: "It's just a question of new software"" (Paul Verhaeghe)
+
+Setting the LD random seed to -35777
+
+Generated 77421 of the 77421 non-bonded parameter combinations
+
+Generated 77421 of the 77421 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 3 bonded neighbours molecule type 'LIG'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+To match AMBER LEaP ordering, reordered 39 and kept 867 Per. Imp. Dih. ordered as encountered (18 Per. Imp. Dih. types total)
+Analysing residue names:
+There are:   278    Protein residues
+There are:     1      Other residues
+There are: 14875      Water residues
+There are:   100        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.421 nm between atom 3995 and 4003
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 80x80x80, spacing 0.112 0.112 0.112
+
+Estimate for the relative computational load of the PME mesh part: 0.27
+
+This run will generate roughly 4 Mb of data
+                      :-) GROMACS - gmx mdrun, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx mdrun -deffnm em -nb gpu
+
+
+Back Off! I just backed up em.log to ./#em.log.1#
+Reading file em.tpr, VERSION 2026.1 (single precision)
+1 GPU selected for this run.
+Mapping of GPU IDs to the 1 GPU task in the 1 rank on this node:
+  PP:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the CPU
+Using 1 MPI thread
+Using 22 OpenMP threads 
+
+
+Back Off! I just backed up em.trr to ./#em.trr.1#
+
+Back Off! I just backed up em.edr to ./#em.edr.1#
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =        50000
+
+writing lowest energy coordinates.
+
+Back Off! I just backed up em.gro to ./#em.gro.1#
+
+Steepest Descents converged to Fmax < 1000 in 725 steps
+Potential Energy  = -7.6416050e+05
+Maximum force     =  9.1642786e+02 on atom 3532
+Norm of force     =  2.3858001e+01
+
+GROMACS reminds you: "Is That a Real Poncho ?" (F. Zappa)
+
+                      :-) GROMACS - gmx grompp, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx grompp -f ../mdp/nvt.mdp -c em.gro -r em.gro -p ../build/topol.top -o nvt.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 100868.00
+
+NOTE 1 [file ../mdp/nvt.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+
+There was 1 NOTE
+
+Back Off! I just backed up nvt.tpr to ./#nvt.tpr.1#
+
+GROMACS reminds you: "error: too many template-parameter-lists" (g++)
+
+Setting the LD random seed to -570516481
+
+Generated 77421 of the 77421 non-bonded parameter combinations
+
+Generated 77421 of the 77421 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'LIG'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+
+To match AMBER LEaP ordering, reordered 39 and kept 867 Per. Imp. Dih. ordered as encountered (18 Per. Imp. Dih. types total)
+
+Setting gen_seed to -1755842825
+
+Velocities were taken from a Maxwell distribution at 300 K
+Analysing residue names:
+There are:   278    Protein residues
+There are:     1      Other residues
+There are: 14875      Water residues
+There are:   100        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.423 nm between atom 3424 and 3432
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.034 nm, buffer size 0.034 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 80x80x80, spacing 0.112 0.112 0.112
+
+Estimate for the relative computational load of the PME mesh part: 0.30
+
+This run will generate roughly 6 Mb of data
+                      :-) GROMACS - gmx mdrun, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx mdrun -deffnm nvt -nb gpu -pme gpu -update gpu
+
+
+Back Off! I just backed up nvt.log to ./#nvt.log.1#
+Reading file nvt.tpr, VERSION 2026.1 (single precision)
+Changing nstlist from 10 to 100, rlist from 1 to 1.173
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 22 OpenMP threads 
+
+
+Back Off! I just backed up nvt.xtc to ./#nvt.xtc.1#
+
+Back Off! I just backed up nvt.edr to ./#nvt.edr.1#
+starting mdrun 'Protein in water'
+50000 steps,    100.0 ps.
+
+Writing final coordinates.
+
+Back Off! I just backed up nvt.gro to ./#nvt.gro.1#
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     2117.369       96.250     2199.9
+                 (ns/day)    (hour/ns)    (ms/step)  (Matom*steps/s) 
+Performance:       89.768        0.267        1.925           25.580 
+
+GROMACS reminds you: "Everything is theoretically impossible, until it is done." (Robert Heinlein)
+
+                      :-) GROMACS - gmx grompp, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx grompp -f ../mdp/npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p ../build/topol.top -o npt.tpr
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group System is 100868.00
+
+NOTE 1 [file ../mdp/npt.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+Last frame         -1 time  100.000   
+
+There was 1 NOTE
+
+Back Off! I just backed up npt.tpr to ./#npt.tpr.1#
+
+GROMACS reminds you: "Everything is theoretically impossible, until it is done." (Robert Heinlein)
+
+Setting the LD random seed to 2061459199
+
+Generated 77421 of the 77421 non-bonded parameter combinations
+
+Generated 77421 of the 77421 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'LIG'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Excluding 1 bonded neighbours molecule type 'CL'
+
+turning H bonds into constraints...
+
+To match AMBER LEaP ordering, reordered 39 and kept 867 Per. Imp. Dih. ordered as encountered (18 Per. Imp. Dih. types total)
+
+Taking velocities from 'nvt.gro'
+Analysing residue names:
+There are:   278    Protein residues
+There are:     1      Other residues
+There are: 14875      Water residues
+There are:   100        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.429 nm between atom 2664 and 2672
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.034 nm, buffer size 0.034 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.000 nm, buffer size 0.000 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+  rest:       	 6.695 -2.103  3.148
+  rest:       	 6.695 -2.103  3.148
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 100 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 80x80x80, spacing 0.112 0.112 0.112
+
+Estimate for the relative computational load of the PME mesh part: 0.30
+
+This run will generate roughly 29 Mb of data
+                      :-) GROMACS - gmx mdrun, 2026.1 (-:
+
+Executable:   /usr/local/gromacs/bin/gmx
+Data prefix:  /usr/local/gromacs
+Working dir:  /home/muka/bio-ai/examples/week6/md/run
+Command line:
+  gmx mdrun -deffnm npt -nb gpu -pme gpu -update gpu
+
+
+Back Off! I just backed up npt.log to ./#npt.log.1#
+Reading file npt.tpr, VERSION 2026.1 (single precision)
+Changing nstlist from 10 to 100, rlist from 1 to 1.173
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do non-perturbed short-ranged interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 22 OpenMP threads 
+
+
+Back Off! I just backed up npt.xtc to ./#npt.xtc.1#
+
+Back Off! I just backed up npt.edr to ./#npt.edr.1#
+starting mdrun 'Protein in water'
+500000 steps,   1000.0 ps.
