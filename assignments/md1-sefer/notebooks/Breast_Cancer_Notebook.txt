@@ -1,3 +1,0 @@
-# Breast Cancer Classification - Notebook
-Bu notebook, `src/eda.py` ve `src/train.py` betiklerinin yaptığı işleri hücreler şeklinde tekrarlar.
-Proje dosyalarındaki kaynak kodu inceleyin ve burada deneylerinizi çoğaltın.
